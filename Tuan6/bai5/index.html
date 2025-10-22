@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Huong Coffee</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header>
+      <h1>Huong Coffee</h1>
+      <nav>
+        <ul>
+          <li><a href="#">Trang chủ</a></li>
+          <li><a href="#">Sản phẩm</a></li>
+          <li><a href="#">Liên hệ</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Nội dung chính -->
+    <main>
+      <!-- Giới thiệu -->
+      <section>
+        <h2>Giới thiệu</h2>
+        <p>
+          Chào mừng bạn đến với <strong>Huong Coffee</strong> — nơi hương vị và
+          niềm đam mê hòa quyện trong từng giọt cà phê.
+        </p>
+      </section>
+
+      <!-- Sản phẩm -->
+      <section>
+        <h2>Sản phẩm nổi bật</h2>
+
+        <!-- Thanh tìm kiếm -->
+        <div class="search-bar">
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Tìm kiếm sản phẩm..."
+          />
+        </div>
+
+        <!-- Danh sách sản phẩm -->
+        <div id="product-list">
+          <article class="product-item">
+            <img
+              src="https://taynguyensoul.vn/wp-content/uploads/2022/06/cach-pha-cafe-phin-cho-quan-taynguyensoul.vn_.jpeg"
+              alt="Cà phê phin đen đá / nóng"
+            />
+            <h3 class="product-name">Cà phê phin đen đá / nóng</h3>
+            <p>Đậm, thơm, vị đặc trưng của cà phê rang xay Việt Nam.</p>
+            <p class="price">Giá: 35.000₫</p>
+          </article>
+
+          <article class="product-item">
+            <img
+              src="https://i.pinimg.com/736x/8f/a5/f6/8fa5f635efc22c2732b0740d06bd9bbd.jpg"
+              alt="Cà phê sữa đá"
+            />
+            <h3 class="product-name">Cà phê sữa đá</h3>
+            <p>
+              Thức uống truyền thống Việt Nam — hòa quyện giữa vị đắng của cà
+              phê đậm đặc và vị béo ngọt của sữa đặc.
+            </p>
+            <p class="price">Giá: 35.000₫</p>
+          </article>
+
+          <article class="product-item">
+            <img
+              src="https://i.pinimg.com/736x/73/e2/5b/73e25b3461b23674decc807eb7fb5f6c.jpg"
+              alt="Cà phê trứng"
+            />
+            <h3 class="product-name">Cà phê trứng</h3>
+            <p>
+              Cà phê trứng là sự kết hợp độc đáo giữa cà phê và trứng gà, tạo
+              nên một hương vị béo ngậy, thơm ngon.
+            </p>
+            <p class="price">Giá: 45.000₫</p>
+          </article>
+        </div>
+
+        <!-- Nút thêm sản phẩm -->
+        <button id="addProductBtn" class="btn-add">Thêm sản phẩm</button>
+
+        <!-- Form thêm sản phẩm (ẩn mặc định) -->
+        <form id="addProductForm" class="hidden">
+          <h3>Thêm sản phẩm mới</h3>
+
+          <label for="newName">Tên sản phẩm:</label>
+          <input type="text" id="newName" required />
+
+          <label for="newPrice">Giá (VNĐ):</label>
+          <input type="number" id="newPrice" required min="1000" step="500" />
+
+          <label for="newImage">Link ảnh:</label>
+          <input type="text" id="newImage" placeholder="https://..." required />
+
+          <label for="newDesc">Mô tả:</label>
+          <textarea id="newDesc" rows="3"></textarea>
+
+          <!-- Thông báo lỗi -->
+          <p
+            id="errorMsg"
+            style="color: red; text-align: center; font-weight: 500"
+          ></p>
+
+          <!-- Nút hành động -->
+          <div
+            style="
+              display: flex;
+              justify-content: center;
+              gap: 15px;
+              margin-top: 10px;
+            "
+          >
+            <button type="submit">Thêm</button>
+            <button type="button" id="cancelBtn">Hủy</button>
+          </div>
+        </form>
+
+        <!-- Form thêm sản phẩm (ẩn mặc định) -->
+        <form id="addProductForm" class="hidden">
+          <h3>Thêm sản phẩm mới</h3>
+          <label for="productName">Tên sản phẩm:</label>
+          <input type="text" id="productName" required />
+
+          <label for="productPrice">Giá:</label>
+          <input type="text" id="productPrice" required />
+
+          <label for="productImage">Link ảnh:</label>
+          <input
+            type="text"
+            id="productImage"
+            placeholder="https://..."
+            required
+          />
+
+          <label for="productDesc">Mô tả:</label>
+          <textarea id="productDesc" rows="3"></textarea>
+
+          <button type="submit">Thêm</button>
+        </form>
+      </section>
+
+      <!-- Form liên hệ -->
+      <section>
+        <h2>Liên hệ với chúng tôi</h2>
+        <form action="#" method="post">
+          <label for="name">Tên của bạn:</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="message">Nội dung:</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+
+          <button type="submit">Gửi</button>
+        </form>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 Huong Coffee</p>
+      <p>Địa chỉ: 543 Lê Trọng Tấn, Dương Nội, Hà Nội</p>
+    </footer>
+
+    <!-- JS -->
+    <script src="script.js"></script>
+  </body>
+</html>
