@@ -1,0 +1,21 @@
+table th {
+  background: #a8dadc; /* xanh pastel */
+  padding: 12px;
+  color: #1d3557;
+  font-weight: bold;
+}
+
+table td {
+  padding: 12px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+table tr:nth-child(even) {
+  background: #f7fafc;
+}
+
+table tr:hover {
+  background: #e0f7f4;
+  transition: 0.2s;
+  cursor: pointer;
+}
